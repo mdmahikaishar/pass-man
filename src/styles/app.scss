@@ -1,0 +1,45 @@
+@import "./mixings.scss";
+@import "./Sidebar.scss";
+
+.holder {
+  // max-width: 1024px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll {
+  &-x {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      height: 0.2rem;
+      background-color: #00000025;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #00000025;
+
+      &:hover {
+        background-color: #00000050;
+      }
+    }
+  }
+  &-y {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+      background-color: #00000025;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #00000025;
+
+      &:hover {
+        background-color: #00000050;
+      }
+    }
+  }
+}

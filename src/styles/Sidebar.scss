@@ -1,0 +1,35 @@
+:root {
+  --sidebar-w: 20rem;
+}
+
+.sidebar-toggler {
+  &-label span {
+    transition: transform 200ms ease, opacity 200ms ease;
+
+    &:first-child {
+      transform: translateY(-0.5rem);
+    }
+    &:last-child {
+      transform: translateY(0.5rem);
+    }
+  }
+
+  &-input:checked ~ header div div .sidebar-toggler-label span {
+    &:first-child {
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+  }
+
+
+
+  // SIDEBAR EFFECT
+  &-input:checked ~ div .sidebar {
+    width: var(--sidebar-w);
+  }
+}
